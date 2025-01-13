@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ramais</title>
+    <link rel="stylesheet" href="style_ramal.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Central de Apoio - Ramais</h1>
+        </div>
+    </header>
+
+    <main>
+        <section>
+            <a href="index.html" class="button">Voltar para a Página Inicial</a>
+        </section>
+
+        <section>
+            <input type="text" id="searchBar" placeholder="Buscar por nome do atendente..." oninput="filterTable()" style="width: 95%; padding: 10px; margin-bottom: 20px; border: 1px solid #ccc; border-radius: 5px;">
+        </section>
+
+        <section>
+            <h2>Lista de Ramais por Setor</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Setor</th>
+                        <th>Nome do Atendente</th>
+                        <th>Ramal</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="sector-header">
+                        <td colspan="3">Assistentes</td>
+                    </tr>
+                    <tr>
+                        <td>Assistente</td>
+                        <td>Darleide Moura</td>
+                        <td>9012</td>
+                    </tr>
+                    <tr>
+                        <td>Assistente</td>
+                        <td>Jean José</td>
+                        <td>9001</td>
+                    </tr>
+                    <tr>
+                        <td>Assistente</td>
+                        <td>Lucas Sales</td>
+                        <td>9003</td>
+                    </tr>
+                    <tr>
+                        <td>Assistente</td>
+                        <td>Victor José</td>
+                        <td>9002</td>
+                    </tr>
+                    <tr>
+                        <td>Assistente</td>
+                        <td>Vinicius José</td>
+                        <td>9005</td>
+                    </tr>
+
+                    <tr class="sector-header">
+                        <td colspan="3">Ativos</td>
+                    </tr>
+                    <tr>
+                        <td>Ativo</td>
+                        <td>Antônio Ugiete</td>
+                        <td>0997</td>
+                    </tr>
+                    <tr>
+                        <td>Ativo</td>
+                        <td>Mateus Gomes</td>
+                        <td>9008</td>
+                    </tr>
+                    <tr>
+                        <td>Ativo</td>
+                        <td>Maria Clara</td>
+                        <td>9006</td>
+                    </tr>
+                    <tr>
+                        <td>Ativo</td>
+                        <td>Rafael Ferasi</td>
+                        <td>9009</td>
+                    </tr>
+                    <tr>
+                        <td>Ativo</td>
+                        <td>Suelen Fátima</td>
+                        <td>9010</td>
+                    </tr>
+
+                    <tr class="sector-header">
+                        <td colspan="3">Dra. Gleyce</td>
+                    </tr>
+                    <tr>
+                        <td>Dra. Gleyce</td>
+                        <td>Jennyfer</td>
+                        <td>9007</td>
+                    </tr>
+                    <tr>
+                        <td>Dra. Gleyce</td>
+                        <td>Priscila Soares</td>
+                        <td>0992</td>
+                    </tr>
+
+                    <tr class="sector-header">
+                        <td colspan="3">Receptivo</td>
+                    </tr>
+                    <tr>
+                        <td>Receptivo</td>
+                        <td>Adriano Vitor</td>
+                        <td>9004</td>
+                    </tr>
+                    <tr>
+                        <td>Receptivo</td>
+                        <td>Gabriel Barros</td>
+                        <td>0994</td>
+                    </tr>
+                    <tr>
+                        <td>Receptivo</td>
+                        <td>Gabriel Correia</td>
+                        <td>0999</td>
+                    </tr>
+                    <tr>
+                        <td>Receptivo</td>
+                        <td>José Francisco</td>
+                        <td>9008</td>
+                    </tr>
+                    <tr>
+                        <td>Receptivo</td>
+                        <td>Larissa Valéria</td>
+                        <td>0996</td>
+                    </tr>
+                    <tr>
+                        <td>Receptivo</td>
+                        <td>Ruan Vinícius</td>
+                        <td>0991</td>
+                    </tr>
+
+                    <tr class="sector-header">
+                        <td colspan="3">Medical</td>
+                    </tr>
+                    <tr>
+                        <td>Medical</td>
+                        <td>Viviane Maria</td>
+                        <td>0993</td>
+                    </tr>
+
+                    <tr class="sector-header">
+                        <td colspan="3">Confirmação</td>
+                    </tr>
+                    <tr>
+                        <td>Confirmação</td>
+                        <td>Débora Queiroz</td>
+                        <td>9011</td>
+                    </tr>
+
+                    <tr class="sector-header">
+                        <td colspan="3">Extras</td>
+                    </tr>
+                    <tr>
+                        <td>Extra</td>
+                        <td>Whatsapp PELE</td>
+                        <td>8199261-0120</td>
+                    </tr>
+                    <tr>
+                        <td>Extra</td>
+                        <td>Whatsapp Medical</td>
+                        <td>8199258-5492</td>
+                    </tr>
+                    <tr>
+                        <td>Extra</td>
+                        <td>Telefone PELE/MEDICAL</td>
+                        <td>8131396001</td>
+                    </tr>
+                
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; [2025] Antônio Ugiete. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        function filterTable() {
+            const searchValue = document.getElementById('searchBar').value.toLowerCase();
+            const table = document.querySelector('table tbody');
+            const rows = table.getElementsByTagName('tr');
+
+            for (let row of rows) {
+                if (!row.classList.contains('sector-header')) {
+                    const nameCell = row.cells[1];
+                    if (nameCell) {
+                        const name = nameCell.textContent.toLowerCase();
+                        row.style.display = name.includes(searchValue) ? '' : 'none';
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html>

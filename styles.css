@@ -1,0 +1,97 @@
+/* Reset básico */
+body, h1, h2, p, ul, li {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #005f73;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header .logo h1 {
+    font-size: 2rem;
+    margin: 0;
+}
+
+main {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+    flex: 1;
+}
+
+main section {
+    padding: 20px 0;
+}
+
+main section h2 {
+    font-size: 1.8rem;
+    color: #005f73;
+    margin-bottom: 10px;
+}
+
+main section p {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px; /* Aumenta o espaçamento vertical entre os botões */
+    padding: 20px 0; /* Adiciona mais espaço em torno da seção de botões */
+}
+
+.buttons a {
+    text-decoration: none;
+    background-color: #0a9396;
+    color: #fff;
+    padding: 15px 30px; /* Aumenta o tamanho dos botões */
+    border-radius: 5px;
+    font-size: 1.1rem; /* Torna o texto dos botões um pouco maior */
+    font-weight: bold;
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.buttons a:hover {
+    background-color: #94d2bd;
+    transform: scale(1.05);
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background: #005f73;
+    color: #fff;
+    margin-top: 20px;
+    flex-shrink: 0;
+}
+
+footer p {
+    font-size: 0.9rem;
+    margin: 0;
+}

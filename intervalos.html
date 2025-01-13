@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Intervalos</title>
+    <link rel="stylesheet" href="style_calculadora.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Calculadora de Intervalos - Enciclopele</h1>
+        </div>
+    </header>
+
+    <main>
+        <section>
+            <a href="index.html" class="button-voltar">Voltar para a Página Inicial</a>
+        </section>
+        
+        <section>
+            <h2>Verifique o Intervalo entre Procedimentos</h2>
+            <form id="intervalForm">
+                <div>
+                    <label for="procedimentoX">Procedimento X:</label>
+                    <select id="procedimentoX" name="procedimentoX">
+                        <!-- Populado dinamicamente -->
+                    </select>
+                </div>
+
+                <div>
+                    <label for="procedimentoY">Procedimento Y:</label>
+                    <select id="procedimentoY" name="procedimentoY">
+                        <!-- Populado dinamicamente -->
+                    </select>
+                </div>
+
+                <button type="button" onclick="calcularIntervalo()">Calcular Intervalo</button>
+            </form>
+
+            <div id="resultado" style="margin-top: 20px;">
+                <h3>Resultado:</h3>
+                <p id="intervaloResultado">Selecione os procedimentos para ver o intervalo.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; [2025] Antônio Ugiete. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="calculadora_intervalos.js"></script>
+</body>
+</html>
